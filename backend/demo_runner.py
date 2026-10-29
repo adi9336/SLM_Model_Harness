@@ -74,14 +74,18 @@ TASKS_CATALOG = [
 ]
 
 
-def print_banner():
+def print_banner(live: bool = False):
     banner_text = Text()
     banner_text.append("TWO-LEVEL AGENT ARCHITECTURE -- LIVE DEMO\n", style="bold cyan")
     banner_text.append("Autonomous ETL Pipeline & DevOps Test Execution\n\n", style="bold white")
+
+    model_label = "Qwen 3.5 4B (Tinker Cloud)" if (live and config.TINKER_API_KEY) else "Qwen 3 8B (Intent Decomposition)"
+    formatter_label = "xLAM 1B / Single-Tool Gating (Verbatim Value Fidelity)"
+
     banner_text.append("* Reasoner (Level 1): ", style="bold yellow")
-    banner_text.append("Qwen 3 8B (Intent Decomposition & Planning)\n", style="white")
+    banner_text.append(f"{model_label}\n", style="white")
     banner_text.append("* Formatter (Level 2): ", style="bold green")
-    banner_text.append("xLAM 1B (Single-Tool Gating & Verbatim Value Fidelity)\n", style="white")
+    banner_text.append(f"{formatter_label}\n", style="white")
     banner_text.append("* Reliability Guards: ", style="bold magenta")
     banner_text.append("Repair Pass + De-dup Guard + Completion Guard", style="white")
 
@@ -210,7 +214,7 @@ def main():
             sys.exit(1)
         sys.exit(0)
 
-    print_banner()
+    print_banner(live=args.live)
 
     if args.task:
         run_task(args.task, live_models=args.live)

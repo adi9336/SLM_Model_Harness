@@ -144,7 +144,7 @@ def get_system_status():
         "tinker_active": tinker_active,
         "tinker_model": config.TINKER_MODEL,
         "active_backend": active_backend,
-        "reasoner_model": config.TINKER_MODEL if tinker_active else config.PRIORITY_MODEL,
+        "reasoner_model": "Qwen 3.5 4B (Tinker)" if tinker_active else config.PRIORITY_MODEL,
         "formatter_model": config.FORMATTER_MODEL,
         "ollama_local_online": ollama_running,
         "on_premise": not tinker_active,
