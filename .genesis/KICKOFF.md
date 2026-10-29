@@ -15,6 +15,6 @@ Load Genesis and official Ponytail full, then run `genesis brief .` for the curr
 Fetch full records with `genesis context . --id ID` only when needed. Do not load project.json or historical proof wholesale.
 Ask the index before reading code: `genesis query . search|scope|callers|callees|impact|path` (`--json` for parsing). Run `genesis query . impact PATH` before editing shared code. Answers are advisory static analysis; `ambiguous` means candidates were not ruled out, so confirm in source.
 Run `genesis serve .` for a live map of the repository when structure is unclear; it reindexes on save and is read-only. Run `genesis index .` if the index is stale and nothing is watching.
-Context fingerprint: aeac72b30cd8a019b7aef146ca6bdedbf9d12dded7867679850dc0fc289c30c2. Use --since only after receiving that full packet; kickoff is not the packet.
+Context fingerprint: 8a9d93ed538b0e6f369c1fcfa0364f9013100fabeeefe735e114eba2467069e5. Use --since only after receiving that full packet; kickoff is not the packet.
 Applicable invariants, active rules, authorization and proof references are in the packet. Truncated summaries are retrieval pointers, not the full evidence.
 Reuse fresh gates with --reuse. Reconcile interrupted attempts before replaying commands. Report state → evidence → blocker → next action; checkpoint before stopping.
