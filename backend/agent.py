@@ -145,19 +145,55 @@ class Agent:
         self.audit = audit
         self.xlam_primary = xlam_primary
 
-        self.client = None
+        self.reasoner_client = None
+        self.formatter_client = None
+        self.backend_name = "Rehearsal Demo"
+
         if not self.demo_mode and OpenAI is not None:
-            try:
-                if config.OPENAI_BASE_URL:
-                    self.client = OpenAI(
+            # 1. Setup Level-1 Reasoner Client (Tinker API Cloud or Local Ollama)
+            if config.TINKER_API_KEY:
+                try:
+                    self.reasoner_client = OpenAI(
+                        base_url=config.TINKER_BASE_URL,
+                        api_key=config.TINKER_API_KEY,
+                    )
+                    self.backend_name = f"Tinker API ({config.TINKER_MODEL})"
+                except Exception as e:
+                    if self.verbose:
+                        print(f"  [Warning] Failed to initialize Tinker client: {e}")
+                    self.reasoner_client = None
+
+            elif config.OPENAI_BASE_URL:
+                try:
+                    self.reasoner_client = OpenAI(
                         base_url=config.OPENAI_BASE_URL,
                         api_key=config.OPENAI_API_KEY or "not-needed",
                         default_headers={"x-opencode-session": config.OPENCODE_SESSION},
                     )
-                else:
-                    self.client = OpenAI(base_url=config.OLLAMA_BASE_URL, api_key="ollama")
+                    self.backend_name = "OpenAI Endpoint"
+                except Exception:
+                    self.reasoner_client = None
+            else:
+                try:
+                    self.reasoner_client = OpenAI(base_url=config.OLLAMA_BASE_URL, api_key="ollama")
+                    self.backend_name = f"Local Ollama ({config.PRIORITY_MODEL})"
+                except Exception:
+                    self.reasoner_client = None
+
+            # 2. Setup Level-2 Formatter Client (Local Ollama xLAM or Tinker Model with Single-Tool Gating)
+            try:
+                # Test if local Ollama is reachable for xLAM
+                import urllib.request
+                req = urllib.request.Request("http://127.0.0.1:11434/api/tags")
+                with urllib.request.urlopen(req, timeout=0.8) as resp:
+                    if resp.status == 200:
+                        self.formatter_client = OpenAI(base_url=config.OLLAMA_BASE_URL, api_key="ollama")
             except Exception:
-                self.client = None
+                # Local Ollama is offline: if Tinker is available, use Tinker model for Level 2 single-tool gating
+                if config.TINKER_API_KEY and self.reasoner_client:
+                    self.formatter_client = self.reasoner_client
+                else:
+                    self.formatter_client = None
 
     def _notify(self, phase: str, title: str, payload: Any = None):
         if self.reporter:
@@ -174,19 +210,30 @@ class Agent:
         return tmpl.format(tools=tools_summary(self.tools))
 
     def _ask_priority(self, messages: List[Dict[str, str]]) -> str:
-        if self.client is None or self.demo_mode:
+        if self.reasoner_client is None or self.demo_mode:
             return self._synthesize_priority_plan(messages)
 
         try:
-            resp = self.client.chat.completions.create(
-                model=config.PRIORITY_MODEL,
+            model = config.TINKER_MODEL if config.TINKER_API_KEY else config.PRIORITY_MODEL
+            resp = self.reasoner_client.chat.completions.create(
+                model=model,
                 messages=[{"role": "system", "content": self._system_prompt()}, *messages],
                 temperature=config.PRIORITY_TEMPERATURE,
             )
-            return resp.choices[0].message.content or ""
+            msg = resp.choices[0].message
+            content = (msg.content or "").strip()
+            # If thinking model put answer in reasoning_content, extract ACTION line
+            if not content and hasattr(msg, "reasoning_content") and msg.reasoning_content:
+                reasoning = msg.reasoning_content
+                m = _ACTION_RE.search(reasoning)
+                if m:
+                    content = m.group(0)
+                else:
+                    content = reasoning
+            return content
         except Exception as e:
             if self.verbose:
-                print(f"  [Notice] Ollama local service unreachable ({e}). Switching to high-resilience demo execution.")
+                print(f"  [Notice] Live reasoner service unreachable ({e}). Switching to high-resilience demo execution.")
             self.demo_mode = True
             return self._synthesize_priority_plan(messages)
 
@@ -194,15 +241,16 @@ class Agent:
         selected = [t for t in self.tools if t["function"]["name"] == tool_name]
         tools = selected if selected else self.tools
 
-        if self.client is None or self.demo_mode:
+        if self.formatter_client is None or self.demo_mode:
             return self._synthesize_xlam_format(intent, tool_name, tools)
 
         if action is None:
             action = f"Call the '{tool_name}' tool to: {intent}" if tool_name else intent
 
         try:
-            resp = self.client.chat.completions.create(
-                model=config.FORMATTER_MODEL,
+            model = config.TINKER_MODEL if (self.formatter_client == self.reasoner_client and config.TINKER_API_KEY) else config.FORMATTER_MODEL
+            resp = self.formatter_client.chat.completions.create(
+                model=model,
                 messages=[
                     {"role": "system", "content": FORMATTER_SYSTEM},
                     {"role": "user", "content": action},
@@ -227,6 +275,10 @@ class Agent:
                     args = json.loads(args)
                 if name:
                     return {"name": name, "arguments": args}
+
+            parsed_args = parse_args(content)
+            if parsed_args and tool_name:
+                return {"name": tool_name, "arguments": parsed_args}
         except Exception:
             pass
 
