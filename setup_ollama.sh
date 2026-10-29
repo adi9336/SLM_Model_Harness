@@ -38,3 +38,4 @@ echo "======================================================="
 echo "   Setup Complete! Local xLAM is ready on Ollama."
 echo "   Every run will now route Level 2 formatting locally!"
 echo "======================================================="
+

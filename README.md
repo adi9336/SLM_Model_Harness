@@ -102,6 +102,13 @@ The agent automatically detects and uses local Ollama on port `11434` for Level-
 
 ## 4. Running the Live Demo
 
+### One-Click Launchers (Windows)
+- **`start.bat`** — Master interactive launcher (Web dashboard, CLI demo, benchmarks, Ollama setup)
+- **`run_server.bat`** — Launches FastAPI & React Web Dashboard at `http://localhost:8000`
+- **`run_demo.bat`** — Launches Audience Terminal CLI Demo (`--live`)
+
+---
+
 ### Option A: Modern Web Dashboard (FastAPI + React shadcn/ui)
 Launch the server from the project root:
 ```bash
