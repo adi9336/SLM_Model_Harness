@@ -1,0 +1,3 @@
+{"name": "aggregate",
+ "prompt": "Load tasks/t003_aggregate/sales.csv as 'sales', aggregate the total amount per cust_id (sum of amount) into a table 'agg', then save to tasks/t003_aggregate/out.csv",
+ "out_path": "tasks/t003_aggregate/out.csv"}

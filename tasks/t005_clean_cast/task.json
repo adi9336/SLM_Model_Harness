@@ -1,0 +1,5 @@
+{
+  "name": "t005_clean_cast",
+  "prompt": "Load tasks/t005_clean_cast/orders.csv into a table named 'orders'. Clean the 'order_date' column. Cast the 'amount' column to number. Save the 'orders' table to tasks/t005_clean_cast/out.csv",
+  "out_path": "tasks/t005_clean_cast/out.csv"
+}

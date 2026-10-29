@@ -1,0 +1,3 @@
+{"name": "join",
+ "prompt": "Load tasks/t002_join/sales.csv as 'sales' and tasks/t002_join/accounts.csv as 'accounts'. Join them on sales.cust_id = accounts.customer_id (inner join) into a table 'joined', then save to tasks/t002_join/out.csv",
+ "out_path": "tasks/t002_join/out.csv"}

@@ -1,0 +1,6 @@
+{
+  "name": "t008_batch_merge",
+  "prompt": "In tasks/realdata/sales/ there are 12 monthly sales CSV files named like '2024-01_sales.csv'. IGNORE the archived/ subfolder and any file whose name contains 'extra'. Load each monthly file into its own table (e.g. '2024-01_sales.csv' into table m01, '2024-02_sales.csv' into m02, and so on). In EVERY loaded table, normalize the Date column to ISO format (YYYY-MM-DD) with clean_dates and cast the Amount column to number with cast_column. Then combine ALL 12 tables into one table named 'combined' with merge_tables (pass all 12 table names). Save the 'combined' table to tasks/t008_batch_merge/out.csv",
+  "out_path": "tasks/t008_batch_merge/out.csv",
+  "max_steps": 60
+}

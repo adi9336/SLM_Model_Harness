@@ -1,0 +1,5 @@
+{
+  "name": "t009_aggregate_report",
+  "prompt": "Load tasks/t009_aggregate_report/combined_clean.csv into a table named 'combined'. Aggregate the total sales per Supplier (sum of Amount) into a table named 'report'. Save the 'report' table to tasks/t009_aggregate_report/out.csv",
+  "out_path": "tasks/t009_aggregate_report/out.csv"
+}

@@ -1,0 +1,3 @@
+cust_id,amount,customer_id,name
+c1,100,c1,Acme
+c2,250,c2,Beta

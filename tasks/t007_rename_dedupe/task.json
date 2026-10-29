@@ -1,0 +1,5 @@
+{
+  "name": "t007_rename_dedupe",
+  "prompt": "Load tasks/t007_rename_dedupe/orders.csv into a table named 'orders'. Rename the 'Customer ID' column to 'customer_id'. Remove duplicate rows into a table named 'clean'. Save the 'clean' table to tasks/t007_rename_dedupe/out.csv",
+  "out_path": "tasks/t007_rename_dedupe/out.csv"
+}

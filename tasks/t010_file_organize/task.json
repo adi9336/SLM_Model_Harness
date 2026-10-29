@@ -1,0 +1,21 @@
+{
+  "name": "t010_file_organize",
+  "prompt": "In tasks/t010_file_organize/input/ there are 12 monthly CSV files. Move EVERY CSV file from input/ into tasks/t010_file_organize/processed/ using move_file. When all 12 files are moved, give your final answer.",
+  "out_dir": "tasks/t010_file_organize/processed",
+  "expected_files": [
+    "2024-01_sales.csv",
+    "2024-02_sales.csv",
+    "2024-03_sales.csv",
+    "2024-04_sales.csv",
+    "2024-05_sales.csv",
+    "2024-06_sales.csv",
+    "2024-07_sales.csv",
+    "2024-08_sales.csv",
+    "2024-09_sales.csv",
+    "2024-10_sales.csv",
+    "2024-11_sales.csv",
+    "2024-12_sales.csv"
+  ],
+  "max_steps": 30,
+  "reset_cmd": "python tasks/gen_real_data.py --task t010"
+}

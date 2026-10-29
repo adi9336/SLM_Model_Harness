@@ -1,0 +1,30 @@
+{
+  "task": "DEMO-RUNNER",
+  "gate": "demo-check",
+  "kind": "command",
+  "attempt": "05b7997b-6de7-4929-b0f1-967898c4ec55",
+  "command": "py demo_runner.py --task tasks/t001_clean_dates --verify-only",
+  "started_at": "2026-10-29T09:13:47.632Z",
+  "observed_at": "2026-10-29T09:13:50.500Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "",
+  "failure": "source-mutated",
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "5eed80cbc36453ba548f86aa516179a1781d8837bb5070f842961e76a7a2ba32",
+  "before_hash": "e990e2e01209cea4db54a9ec088364cff9f31745f8b6e4b5f9d2fe07b9fd0fa4",
+  "config_hash": "19978f2da18ca09cbedcd1d0761ca96f72a5d71ac4ab126ec3ae90b9c1376bd0",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64",
+    "verifier": "cbdddbf25e5ed5f3406b93881ae54f64d11a8c54f0bfe177d19d9d9946a6a971",
+    "variables": {}
+  },
+  "hash": "163c7fc219fcc1f0241706e0fd61cdc5fdf81efc9165cc7b3e19f0e42657e93e"
+}

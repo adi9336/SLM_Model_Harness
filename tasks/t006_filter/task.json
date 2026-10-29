@@ -1,0 +1,5 @@
+{
+  "name": "t006_filter",
+  "prompt": "Load tasks/t006_filter/orders.csv into a table named 'orders'. Cast the 'amount' column to number. Filter rows where amount is greater than 100 into a table named 'big'. Save the 'big' table to tasks/t006_filter/out.csv",
+  "out_path": "tasks/t006_filter/out.csv"
+}

@@ -1,0 +1,30 @@
+{
+  "task": "DEMO-RUNNER",
+  "gate": "demo-check",
+  "kind": "command",
+  "attempt": "ce8337dd-7d1e-4fbc-be1b-bd595870e32d",
+  "command": "py demo_runner.py --task tasks/t001_clean_dates --verify-only",
+  "started_at": "2026-10-29T09:14:34.530Z",
+  "observed_at": "2026-10-29T09:14:37.210Z",
+  "exit_code": 1,
+  "signal": null,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\Users\\Adi\\Desktop\\Adi\\My_Projects\\SLM_Model_Harness\\demo_runner.py\", line 243, in <module>\r\n    main()\r\n    ~~~~^^\r\n  File \"C:\\Users\\Adi\\Desktop\\Adi\\My_Projects\\SLM_Model_Harness\\demo_runner.py\", line 202, in main\r\n    matched, _ = run_task(target_task, verify_only=True, live_models=args.live)\r\n                 ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\Adi\\Desktop\\Adi\\My_Projects\\SLM_Model_Harness\\demo_runner.py\", line 170, in run_task\r\n    Path(db_path).unlink(missing_ok=True)\r\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\r\n  File \"C:\\ProgramData\\anaconda3\\Lib\\pathlib\\_local.py\", line 746, in unlink\r\n    os.unlink(self)\r\n    ~~~~~~~~~^^^^^^\r\nPermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'clean_dates.db'\r\n",
+  "failure": "command-failed",
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "0784cba7395801c743f156d923b6b05c126b71bbf51df32995507fcaa30fc8f2",
+  "before_hash": "0784cba7395801c743f156d923b6b05c126b71bbf51df32995507fcaa30fc8f2",
+  "config_hash": "19978f2da18ca09cbedcd1d0761ca96f72a5d71ac4ab126ec3ae90b9c1376bd0",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64",
+    "verifier": "cbdddbf25e5ed5f3406b93881ae54f64d11a8c54f0bfe177d19d9d9946a6a971",
+    "variables": {}
+  },
+  "hash": "326e84fba1b0f8425a8257b915bf8f2d64ee038c4a307d58b9e1774f16065c09"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "t011_cleanup_master",
+  "prompt": "Load tasks/t011_cleanup_master/customers.csv into a table named 'cust'. Remove all duplicate rows with dedupe into a new table named 'clean'. Rename the 'Customer ID' column to 'customer_id'. Save the clean table to tasks/t011_cleanup_master/out.csv",
+  "out_path": "tasks/t011_cleanup_master/out.csv"
+}

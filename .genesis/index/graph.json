@@ -1,0 +1,2210 @@
+{
+  "schemaVersion": 2,
+  "project": "SLM_Model_Harness",
+  "revision": null,
+  "sourceHash": "e4783056b8d959c5367bb3bc59b8dc1e1a0dbbf78b93db055c0f62f1ad8e20f5",
+  "provenance": {
+    "tool": "genesis-graphizer",
+    "method": "static-analysis",
+    "confidenceScale": "0..1"
+  },
+  "nodes": [
+    {
+      "id": "file:agent.py",
+      "type": "file",
+      "label": "agent.py",
+      "path": "agent.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "ad232f5c46311e259ebe79728ef3b7ff6df36aa41e90c81b26f7a0c1636c1ebf"
+    },
+    {
+      "id": "file:automation/__init__.py",
+      "type": "file",
+      "label": "automation/__init__.py",
+      "path": "automation/__init__.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "e5adf08ace69c0300d3d8395300dc187a0a19a06e80285d4de9e5c6671812bcb"
+    },
+    {
+      "id": "file:automation/benchmark.py",
+      "type": "file",
+      "label": "automation/benchmark.py",
+      "path": "automation/benchmark.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "ce1b9160451e9d3dd81ac4d74d33e2aba492f515127c04426ea2f4d7fec480cc"
+    },
+    {
+      "id": "file:automation/datastore.py",
+      "type": "file",
+      "label": "automation/datastore.py",
+      "path": "automation/datastore.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "f0df0ae2c411097114308061760448038749d964772282c9e941652205e031a8"
+    },
+    {
+      "id": "file:automation/etl_tools.py",
+      "type": "file",
+      "label": "automation/etl_tools.py",
+      "path": "automation/etl_tools.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "134840083a5744523fba51ace91652aa7096752a865a4c7bf9c2e06031bfad56"
+    },
+    {
+      "id": "file:automation/run_etl.py",
+      "type": "file",
+      "label": "automation/run_etl.py",
+      "path": "automation/run_etl.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "85c7b77200d855010a718ab19c25aa1155c1357bd7a446ca91329d3761ca46a1"
+    },
+    {
+      "id": "file:automation/tasks.py",
+      "type": "file",
+      "label": "automation/tasks.py",
+      "path": "automation/tasks.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "66a039bc03364beab2d87646a5521fe8e596dac4ee8e6f2c2808588dfc80a908"
+    },
+    {
+      "id": "file:config.py",
+      "type": "file",
+      "label": "config.py",
+      "path": "config.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "02fbc4fc1af5c95bd61c5c73a1bef85b916960f88d1921cd856da0c5911a1543"
+    },
+    {
+      "id": "file:demo_runner.py",
+      "type": "file",
+      "label": "demo_runner.py",
+      "path": "demo_runner.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "9c96b4bec3cf6c13572e09be0c2871caf4daafa174c99cede3e143f534407847"
+    },
+    {
+      "id": "file:frontend/postcss.config.js",
+      "type": "file",
+      "label": "frontend/postcss.config.js",
+      "path": "frontend/postcss.config.js",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "f0156321fafa19749b38a82ea29e7b1786a1f727b67372ef40cc66de0ed898fb"
+    },
+    {
+      "id": "file:frontend/src/App.tsx",
+      "type": "file",
+      "label": "frontend/src/App.tsx",
+      "path": "frontend/src/App.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "1ab14c73a8faedaf769fabb1c40452bb4a9325a807228b96371296d8329bd3d8"
+    },
+    {
+      "id": "file:frontend/src/components/DataPreviewTable.tsx",
+      "type": "file",
+      "label": "frontend/src/components/DataPreviewTable.tsx",
+      "path": "frontend/src/components/DataPreviewTable.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "f26228ba524f45d6a5d3e52f095e7b83604790c91432cde47c87b68005e42b9c"
+    },
+    {
+      "id": "file:frontend/src/components/ExecutionFeed.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ExecutionFeed.tsx",
+      "path": "frontend/src/components/ExecutionFeed.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "d865498d02438c3606f7ed20ab3d4195e1dad6cae38d1c58d73f2283cf717045"
+    },
+    {
+      "id": "file:frontend/src/components/Header.tsx",
+      "type": "file",
+      "label": "frontend/src/components/Header.tsx",
+      "path": "frontend/src/components/Header.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "7cb80e9074c7db509f2d0b827e730c3a5689887d9d259b8469150b26cb2402c4"
+    },
+    {
+      "id": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ScenarioSidebar.tsx",
+      "path": "frontend/src/components/ScenarioSidebar.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "5c30438d34f495b692bfed65cb1421d3632e142593e4e3c89a425f9969a2e19e"
+    },
+    {
+      "id": "file:frontend/src/components/Scorecard.tsx",
+      "type": "file",
+      "label": "frontend/src/components/Scorecard.tsx",
+      "path": "frontend/src/components/Scorecard.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "b0bff1f590edf42e218e2e5989b1744b44f878889f3089601da8fa1ba98820ad"
+    },
+    {
+      "id": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "type": "file",
+      "label": "frontend/src/components/TinkerSettingsModal.tsx",
+      "path": "frontend/src/components/TinkerSettingsModal.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "361b7dbc0221f08c76900fb6e12aef52309336e8a390d2949ff9b56cd5731dd4"
+    },
+    {
+      "id": "file:frontend/src/components/ui/badge.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ui/badge.tsx",
+      "path": "frontend/src/components/ui/badge.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "14ccfdd9edc807419cd3327c61d4f68e4c3bb770ab26358f871e68302c8c0163"
+    },
+    {
+      "id": "file:frontend/src/components/ui/button.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ui/button.tsx",
+      "path": "frontend/src/components/ui/button.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "35f9686b194c5334a3b8a22320c9883d4ec7c0b75081b1119585a4e5dd0b3994"
+    },
+    {
+      "id": "file:frontend/src/components/ui/card.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ui/card.tsx",
+      "path": "frontend/src/components/ui/card.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "bca96c9710d24b25f52131dc471d5f15c7c01c9ae12a3b86ffbee8c398101c9e"
+    },
+    {
+      "id": "file:frontend/src/components/ui/dialog.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ui/dialog.tsx",
+      "path": "frontend/src/components/ui/dialog.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "c88fea74fe76f7671c5628c1b89a428d897dc7a63cb432458bd712b7ce0ae50c"
+    },
+    {
+      "id": "file:frontend/src/components/ui/switch.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ui/switch.tsx",
+      "path": "frontend/src/components/ui/switch.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "89e47a0c6fbb38c25ec9da4c20330fa9045f28b0ee4e528dadd182abeaebc892"
+    },
+    {
+      "id": "file:frontend/src/components/ui/table.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ui/table.tsx",
+      "path": "frontend/src/components/ui/table.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "e157156d8e76b335d4fdaef5c33434639252e6bb524666d85f4096ff3d67ff2d"
+    },
+    {
+      "id": "file:frontend/src/components/ui/tabs.tsx",
+      "type": "file",
+      "label": "frontend/src/components/ui/tabs.tsx",
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "dd4e7d998a6b6664613a21bfbc200e1f74f089b889435152b8aca0c5789691e5"
+    },
+    {
+      "id": "file:frontend/src/lib/utils.ts",
+      "type": "file",
+      "label": "frontend/src/lib/utils.ts",
+      "path": "frontend/src/lib/utils.ts",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "52d9b4da14868b1c50fd3e21aa566aa5d73c06e2b50763209395f4bcd2b757fe"
+    },
+    {
+      "id": "file:frontend/src/main.tsx",
+      "type": "file",
+      "label": "frontend/src/main.tsx",
+      "path": "frontend/src/main.tsx",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "08f0497835e9a5e1ce155f74797861e569be23637adff7c7f7bac8e2913af99f"
+    },
+    {
+      "id": "file:frontend/tailwind.config.js",
+      "type": "file",
+      "label": "frontend/tailwind.config.js",
+      "path": "frontend/tailwind.config.js",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "3e4c61ade8de298f938c978185aa4d8e6a469d8154891c0d2ba678ea262a864f"
+    },
+    {
+      "id": "file:frontend/vite.config.ts",
+      "type": "file",
+      "label": "frontend/vite.config.ts",
+      "path": "frontend/vite.config.ts",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "45a5fec93a306c1d779c55f7b7813d9ff5cbb254730dc2ec30e42c8be4af5743"
+    },
+    {
+      "id": "file:harness.py",
+      "type": "file",
+      "label": "harness.py",
+      "path": "harness.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "598f7c7f0ab794bc0d7442f8d217ae285dad2e789ce61b917db9a390e914ed8a"
+    },
+    {
+      "id": "file:reliability.py",
+      "type": "file",
+      "label": "reliability.py",
+      "path": "reliability.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "0f7b8847692de455ca49b7b0b871dc1f7ed403d936b0b96c13afc27cb690ab46"
+    },
+    {
+      "id": "file:server.py",
+      "type": "file",
+      "label": "server.py",
+      "path": "server.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "305854cf19f02351da4bd3a2c88142baabaecf52619c163153fa783f228c2e79"
+    },
+    {
+      "id": "file:static/assets/index-C9TSfl_s.js",
+      "type": "file",
+      "label": "static/assets/index-C9TSfl_s.js",
+      "path": "static/assets/index-C9TSfl_s.js",
+      "language": "javascript",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "223f74f3e978c99469d1fac288fb74e74accd8aa9b990c6ae2c94f892cfa335b"
+    },
+    {
+      "id": "file:tasks/gen_data.py",
+      "type": "file",
+      "label": "tasks/gen_data.py",
+      "path": "tasks/gen_data.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "c5e9527edb039ee9dd1efab52645e1da925d7300c04a7c3f7e6fa8331fde1b77"
+    },
+    {
+      "id": "file:tasks/gen_real_data.py",
+      "type": "file",
+      "label": "tasks/gen_real_data.py",
+      "path": "tasks/gen_real_data.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "97135c8ec2076b96a25154124fbce576c853f6ce3964645f81700794d6434d44"
+    },
+    {
+      "id": "file:tests/test_agent.py",
+      "type": "file",
+      "label": "tests/test_agent.py",
+      "path": "tests/test_agent.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "530c074106ff62b49903bc448c9c9a9391d775b15d31d20bc02b8b34ac9d5df9"
+    },
+    {
+      "id": "file:tests/test_datastore.py",
+      "type": "file",
+      "label": "tests/test_datastore.py",
+      "path": "tests/test_datastore.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "880c7733fff9bb58eb8f823eb930cb05628e840e2a5140fd5b0e728756864f0a"
+    },
+    {
+      "id": "file:tests/test_reliability.py",
+      "type": "file",
+      "label": "tests/test_reliability.py",
+      "path": "tests/test_reliability.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "c9eb58b5560430b4e4256dd46d3c7508a1f48c0a2303616c8a46eeab4b6174e7"
+    },
+    {
+      "id": "file:tests/test_tasks.py",
+      "type": "file",
+      "label": "tests/test_tasks.py",
+      "path": "tests/test_tasks.py",
+      "language": "python",
+      "confidence": 1,
+      "extractor": "filesystem",
+      "contentHash": "91a5217811c21adb52b4368339f9827984f46fd2e62adb968af6745fb83067a7"
+    },
+    {
+      "id": "package:npm:@vitejs/plugin-react",
+      "type": "package",
+      "label": "@vitejs/plugin-react",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "329fe87afb29363cee154f365b90dbf2161e037f799c57b8111cdde51bc2fa57"
+    },
+    {
+      "id": "package:npm:clsx",
+      "type": "package",
+      "label": "clsx",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "4cb348f4e8458ca8e6ceb3165f854c06a7ea7f6e4ac51d987cbd6da7bfbd1559"
+    },
+    {
+      "id": "package:npm:lucide-react",
+      "type": "package",
+      "label": "lucide-react",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "7f6affdcd002044dd1bba8f1b0965f5fc33a67c90f2afbe455e419bebbcd2a85"
+    },
+    {
+      "id": "package:npm:react",
+      "type": "package",
+      "label": "react",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "5235ef4d5d23a83db39d749bfea92bdc3cac601ea2cfae3a8f15e91d7ee494ff"
+    },
+    {
+      "id": "package:npm:react-dom",
+      "type": "package",
+      "label": "react-dom",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "5f9d9dcdbb9a5bf248cc9f6a01e1c2894b76c1c610e37cf4787581b41cc75bea"
+    },
+    {
+      "id": "package:npm:tailwind-merge",
+      "type": "package",
+      "label": "tailwind-merge",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "b5187e8cae5d48953825c7e5b82388396dedc0d88b9d0834d0eac754290f890b"
+    },
+    {
+      "id": "package:npm:vite",
+      "type": "package",
+      "label": "vite",
+      "ecosystem": "npm",
+      "confidence": 0.85,
+      "extractor": "import",
+      "contentHash": "0f4ade9ff47a7d91bb8b53889b050a00e86e9d3b9cfbf10ce62419fee2c244bc"
+    },
+    {
+      "id": "runtime:javascript:path",
+      "type": "runtime",
+      "label": "path",
+      "language": "javascript",
+      "confidence": 0.85,
+      "extractor": "standard-library",
+      "contentHash": "8e9e99a892940fe6824c66f1743a5359c95f727c8518cd02475056bed12dbba5"
+    },
+    {
+      "id": "symbol:frontend/src/App.tsx#function:App",
+      "type": "symbol",
+      "kind": "function",
+      "name": "App",
+      "label": "App",
+      "path": "frontend/src/App.tsx",
+      "line": 22,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "4a655959380f93bf139d7f42bab50fda20c1ae29c9ecffb3ca2f4f5536289fde"
+    },
+    {
+      "id": "symbol:frontend/src/components/DataPreviewTable.tsx#function:DataPreviewTable",
+      "type": "symbol",
+      "kind": "function",
+      "name": "DataPreviewTable",
+      "label": "DataPreviewTable",
+      "path": "frontend/src/components/DataPreviewTable.tsx",
+      "line": 5,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "156a9f30c254e745ab25bae0ce136e19a4cecf1f280e1f896eac16cda5d39ef3"
+    },
+    {
+      "id": "symbol:frontend/src/components/ExecutionFeed.tsx#function:ExecutionFeed",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ExecutionFeed",
+      "label": "ExecutionFeed",
+      "path": "frontend/src/components/ExecutionFeed.tsx",
+      "line": 26,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "381dfbb319753a3c959867d2980eac6ad89a1ce9c6749a7c4d8442b0480cd486"
+    },
+    {
+      "id": "symbol:frontend/src/components/ExecutionFeed.tsx#interface:ExecutionFeedProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "ExecutionFeedProps",
+      "label": "ExecutionFeedProps",
+      "path": "frontend/src/components/ExecutionFeed.tsx",
+      "line": 21,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "470ca1057d908b3f0500f4fa86a10ffefc84d7e99a67ccda054c23503a85acac"
+    },
+    {
+      "id": "symbol:frontend/src/components/ExecutionFeed.tsx#interface:StreamEvent",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "StreamEvent",
+      "label": "StreamEvent",
+      "path": "frontend/src/components/ExecutionFeed.tsx",
+      "line": 14,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "2f30207739342bdb92fe6efea5deb9adddbc74a5398e079f66165ff42ef60e97"
+    },
+    {
+      "id": "symbol:frontend/src/components/Header.tsx#function:Header",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Header",
+      "label": "Header",
+      "path": "frontend/src/components/Header.tsx",
+      "line": 19,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5cbe8c7de3158a63637884da50a9ec0248155d7af607fe220751d9608b9927e1"
+    },
+    {
+      "id": "symbol:frontend/src/components/Header.tsx#interface:HeaderProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "HeaderProps",
+      "label": "HeaderProps",
+      "path": "frontend/src/components/Header.tsx",
+      "line": 6,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "0d3566aee5f781d427931b1c694aa41b15aa9ec3347962a606924e4b7d101533"
+    },
+    {
+      "id": "symbol:frontend/src/components/ScenarioSidebar.tsx#function:ScenarioSidebar",
+      "type": "symbol",
+      "kind": "function",
+      "name": "ScenarioSidebar",
+      "label": "ScenarioSidebar",
+      "path": "frontend/src/components/ScenarioSidebar.tsx",
+      "line": 42,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "fc04121c8a895036fe556276d3c6fef7acef8877cd584aed29d6a9d73084562b"
+    },
+    {
+      "id": "symbol:frontend/src/components/ScenarioSidebar.tsx#interface:ScenarioSidebarProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "ScenarioSidebarProps",
+      "label": "ScenarioSidebarProps",
+      "path": "frontend/src/components/ScenarioSidebar.tsx",
+      "line": 30,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "91e1810bc004268f08dac34785bfd36449608ebc2e37106997266c5f5582b03e"
+    },
+    {
+      "id": "symbol:frontend/src/components/ScenarioSidebar.tsx#interface:TaskItem",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "TaskItem",
+      "label": "TaskItem",
+      "path": "frontend/src/components/ScenarioSidebar.tsx",
+      "line": 19,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "2fda584f47ee80804c807ae8f9cd0eb2ad7721032f4176e61bc92d8c69c66de7"
+    },
+    {
+      "id": "symbol:frontend/src/components/Scorecard.tsx#function:Scorecard",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Scorecard",
+      "label": "Scorecard",
+      "path": "frontend/src/components/Scorecard.tsx",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9171ffafd80e2bfe5c1b24e899f5d58f5fbbff125afc005c1e6470839bc48b85"
+    },
+    {
+      "id": "symbol:frontend/src/components/Scorecard.tsx#interface:ScoreData",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "ScoreData",
+      "label": "ScoreData",
+      "path": "frontend/src/components/Scorecard.tsx",
+      "line": 6,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "923253f01cacfe95882b62aba5a73660b788724d674ade76c4634ce3e8e5ba6e"
+    },
+    {
+      "id": "symbol:frontend/src/components/TinkerSettingsModal.tsx#function:TinkerSettingsModal",
+      "type": "symbol",
+      "kind": "function",
+      "name": "TinkerSettingsModal",
+      "label": "TinkerSettingsModal",
+      "path": "frontend/src/components/TinkerSettingsModal.tsx",
+      "line": 15,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9199fc7de09fd411c7c26835f326944e952d747c9cb6142def51dc4acb1ba155"
+    },
+    {
+      "id": "symbol:frontend/src/components/TinkerSettingsModal.tsx#interface:TinkerSettingsModalProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "TinkerSettingsModalProps",
+      "label": "TinkerSettingsModalProps",
+      "path": "frontend/src/components/TinkerSettingsModal.tsx",
+      "line": 7,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "442413448c746c7a6025087503cd88a02f3b34756c6c00974a893e333a5c5c83"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/badge.tsx#function:Badge",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Badge",
+      "label": "Badge",
+      "path": "frontend/src/components/ui/badge.tsx",
+      "line": 8,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "bdc409d5c6a477fbb3422476775e4f28416a8639bbc7d32fddef01783f7dc274"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/badge.tsx#interface:BadgeProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "BadgeProps",
+      "label": "BadgeProps",
+      "path": "frontend/src/components/ui/badge.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "5e6a023a1cb93b969318137ee28c4d4db5e634fed324e84ad5854c87fcdeba91"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/button.tsx#interface:ButtonProps",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "ButtonProps",
+      "label": "ButtonProps",
+      "path": "frontend/src/components/ui/button.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "d9e6314585948964684c65550627a30914179704f02b02ae65d00d66f5c38261"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/button.tsx#variable:Button",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "Button",
+      "label": "Button",
+      "path": "frontend/src/components/ui/button.tsx",
+      "line": 9,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "8fdd4972578b60f7158848bf176803c72bb15579de7dc337e70ce1f808e05e8e"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/card.tsx#variable:Card",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "Card",
+      "label": "Card",
+      "path": "frontend/src/components/ui/card.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "1e6529aab96afc855f1eb1bdec1229423828e7abdf5a794493e01215d9ee6a65"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/card.tsx#variable:CardContent",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "CardContent",
+      "label": "CardContent",
+      "path": "frontend/src/components/ui/card.tsx",
+      "line": 43,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "e427aba7c811dcef69719afea8ad581ae733f3cada86beb65c295ebc8a5d9fc5"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/card.tsx#variable:CardDescription",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "CardDescription",
+      "label": "CardDescription",
+      "path": "frontend/src/components/ui/card.tsx",
+      "line": 36,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "42641cede825faa1da88e8f29fda8bef5e16bc04e4c133ad8389e19b1bb780f7"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/card.tsx#variable:CardFooter",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "CardFooter",
+      "label": "CardFooter",
+      "path": "frontend/src/components/ui/card.tsx",
+      "line": 50,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "d8180d3eb849e8eb6f9c587133a525a0a6ed1e46af848990b97e9672cb711276"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/card.tsx#variable:CardHeader",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "CardHeader",
+      "label": "CardHeader",
+      "path": "frontend/src/components/ui/card.tsx",
+      "line": 18,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "3c724ac69d983c9d9ac283bf8e73ed3063d4216e3e7802614128d2c66746a1cb"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/card.tsx#variable:CardTitle",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "CardTitle",
+      "label": "CardTitle",
+      "path": "frontend/src/components/ui/card.tsx",
+      "line": 25,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "102cda169b900b6b102a3478547332b53aba5b3215ca1ae5aab95302804779d6"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/dialog.tsx#function:Dialog",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Dialog",
+      "label": "Dialog",
+      "path": "frontend/src/components/ui/dialog.tsx",
+      "line": 5,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "356eebf07fe1386467738689f436ee56c46205eb14c3b23e7827dd86b7e172b9"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogDescription",
+      "type": "symbol",
+      "kind": "function",
+      "name": "DialogDescription",
+      "label": "DialogDescription",
+      "path": "frontend/src/components/ui/dialog.tsx",
+      "line": 47,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "8e8df63e4c2dd0587717333254b91e628e194888d35bd10a6d04894527f4dd50"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogFooter",
+      "type": "symbol",
+      "kind": "function",
+      "name": "DialogFooter",
+      "label": "DialogFooter",
+      "path": "frontend/src/components/ui/dialog.tsx",
+      "line": 51,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "6feace4975719585b44f02b39d4f60bbde20f49c1fc22c3d60735447c4a6ef94"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogHeader",
+      "type": "symbol",
+      "kind": "function",
+      "name": "DialogHeader",
+      "label": "DialogHeader",
+      "path": "frontend/src/components/ui/dialog.tsx",
+      "line": 39,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "fa3f86f418e73848580330d1086740b69472e5a9f8c85b3c5b26564dbe9546ca"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogTitle",
+      "type": "symbol",
+      "kind": "function",
+      "name": "DialogTitle",
+      "label": "DialogTitle",
+      "path": "frontend/src/components/ui/dialog.tsx",
+      "line": 43,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "a20858f586566fc16495c5d2a6bf08618eab607f4a12e32da0f167031f8d9e5c"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/switch.tsx#function:Switch",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Switch",
+      "label": "Switch",
+      "path": "frontend/src/components/ui/switch.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "c7c543aebcd64ab2f4c6a33b6bd1443fa675ad6bdd31d245f4dc35401289e657"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/table.tsx#variable:Table",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "Table",
+      "label": "Table",
+      "path": "frontend/src/components/ui/table.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "9d8adc825d6a58a2032d4efb574198f7a1e0023da930add6afda5d32646ec5d4"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/table.tsx#variable:TableBody",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "TableBody",
+      "label": "TableBody",
+      "path": "frontend/src/components/ui/table.tsx",
+      "line": 20,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "e49ca361abc2db2680a8abeaf613f2ced7ae6fec2f87a188a18faebba7ddfb78"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/table.tsx#variable:TableCell",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "TableCell",
+      "label": "TableCell",
+      "path": "frontend/src/components/ui/table.tsx",
+      "line": 49,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "d05b9ab663e8b2af757392d4782e88ed64d249df2f6afc0eb03d94f2bb275113"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/table.tsx#variable:TableHead",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "TableHead",
+      "label": "TableHead",
+      "path": "frontend/src/components/ui/table.tsx",
+      "line": 38,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "444f3ff7c76c5cadeb7fba072db7972ee008f185d040b8e8e5dcc364a3a3fb00"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/table.tsx#variable:TableHeader",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "TableHeader",
+      "label": "TableHeader",
+      "path": "frontend/src/components/ui/table.tsx",
+      "line": 13,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "4ff02e13675d05e993e9d93d0ca102eab7f428fc1b8a75baa0fad22a8c07e70e"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/table.tsx#variable:TableRow",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "TableRow",
+      "label": "TableRow",
+      "path": "frontend/src/components/ui/table.tsx",
+      "line": 27,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "1db56c27abe1e6f8dc2cbaa4cee920110a54a795cc4afd7b56caed429fb5f960"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/tabs.tsx#function:Tabs",
+      "type": "symbol",
+      "kind": "function",
+      "name": "Tabs",
+      "label": "Tabs",
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "line": 11,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "7f1dd91c46ee0da8a3f2e4fffcb9528cdca23214132d382d3261f7bc1463f1ae"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsContent",
+      "type": "symbol",
+      "kind": "function",
+      "name": "TabsContent",
+      "label": "TabsContent",
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "line": 90,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "b22e1a3a3ec5dbb24a540bf128bc20ddf9c295ff8475057f93c04b8b294d5b5d"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsList",
+      "type": "symbol",
+      "kind": "function",
+      "name": "TabsList",
+      "label": "TabsList",
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "line": 35,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "b2f5466157fc503a41ace352c3f94e2cd63861e69a01782cb0aa6895c8eef4e9"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsTrigger",
+      "type": "symbol",
+      "kind": "function",
+      "name": "TabsTrigger",
+      "label": "TabsTrigger",
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "line": 48,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "e9f1f421cb0b613c835b2d5aed32030190a9e056427fc1ec36d446fb79f30f0d"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/tabs.tsx#interface:TabsContextValue",
+      "type": "symbol",
+      "kind": "interface",
+      "name": "TabsContextValue",
+      "label": "TabsContextValue",
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "74a3e33eed15c947dbdae4beacb1bec336656f0e03ac915f9575d61b36b92fd9"
+    },
+    {
+      "id": "symbol:frontend/src/components/ui/tabs.tsx#variable:TabsContext",
+      "type": "symbol",
+      "kind": "variable",
+      "name": "TabsContext",
+      "label": "TabsContext",
+      "path": "frontend/src/components/ui/tabs.tsx",
+      "line": 9,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "24d68143f4a81dfee8cb95b301e98be0f063b47bcb710292a9dbaf54a9e0c715"
+    },
+    {
+      "id": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "type": "symbol",
+      "kind": "function",
+      "name": "cn",
+      "label": "cn",
+      "path": "frontend/src/lib/utils.ts",
+      "line": 4,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols",
+      "contentHash": "e2ae3f875cc3b5e6c165c035663a00505bfaa0d74585fc314eb54c896b52bceb"
+    },
+    {
+      "id": "unresolved:frontend/src/main.tsx:./index.css",
+      "type": "unresolved",
+      "label": "./index.css",
+      "confidence": 0.4,
+      "extractor": "import",
+      "contentHash": "b39d8260d3240a9b59df5e0093f457929e42a4c72ecac5a10fa3bfedae968b21"
+    }
+  ],
+  "edges": [
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/App.tsx#function:App",
+      "target": "symbol:frontend/src/components/Scorecard.tsx#function:Scorecard",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/badge.tsx#function:Badge",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/button.tsx#variable:Button",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/card.tsx#variable:Card",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/card.tsx#variable:CardContent",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/card.tsx#variable:CardDescription",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/card.tsx#variable:CardFooter",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/card.tsx#variable:CardHeader",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/card.tsx#variable:CardTitle",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogDescription",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogFooter",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogHeader",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogTitle",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/switch.tsx#function:Switch",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/table.tsx#variable:Table",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/table.tsx#variable:TableBody",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/table.tsx#variable:TableCell",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/table.tsx#variable:TableHead",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/table.tsx#variable:TableHeader",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/table.tsx#variable:TableRow",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/tabs.tsx#function:Tabs",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsContent",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsList",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "calls",
+      "source": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsTrigger",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "tier": "proven",
+      "resolved": true,
+      "confidence": 0.7,
+      "extractor": "conservative-js-calls"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/App.tsx",
+      "target": "symbol:frontend/src/App.tsx#function:App",
+      "line": 22,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/DataPreviewTable.tsx",
+      "target": "symbol:frontend/src/components/DataPreviewTable.tsx#function:DataPreviewTable",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ExecutionFeed.tsx",
+      "target": "symbol:frontend/src/components/ExecutionFeed.tsx#function:ExecutionFeed",
+      "line": 26,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ExecutionFeed.tsx",
+      "target": "symbol:frontend/src/components/ExecutionFeed.tsx#interface:ExecutionFeedProps",
+      "line": 21,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ExecutionFeed.tsx",
+      "target": "symbol:frontend/src/components/ExecutionFeed.tsx#interface:StreamEvent",
+      "line": 14,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/Header.tsx",
+      "target": "symbol:frontend/src/components/Header.tsx#function:Header",
+      "line": 19,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/Header.tsx",
+      "target": "symbol:frontend/src/components/Header.tsx#interface:HeaderProps",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "symbol:frontend/src/components/ScenarioSidebar.tsx#function:ScenarioSidebar",
+      "line": 42,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "symbol:frontend/src/components/ScenarioSidebar.tsx#interface:ScenarioSidebarProps",
+      "line": 30,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "symbol:frontend/src/components/ScenarioSidebar.tsx#interface:TaskItem",
+      "line": 19,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/Scorecard.tsx",
+      "target": "symbol:frontend/src/components/Scorecard.tsx#function:Scorecard",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/Scorecard.tsx",
+      "target": "symbol:frontend/src/components/Scorecard.tsx#interface:ScoreData",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "target": "symbol:frontend/src/components/TinkerSettingsModal.tsx#function:TinkerSettingsModal",
+      "line": 15,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "target": "symbol:frontend/src/components/TinkerSettingsModal.tsx#interface:TinkerSettingsModalProps",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/badge.tsx",
+      "target": "symbol:frontend/src/components/ui/badge.tsx#function:Badge",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/badge.tsx",
+      "target": "symbol:frontend/src/components/ui/badge.tsx#interface:BadgeProps",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/button.tsx",
+      "target": "symbol:frontend/src/components/ui/button.tsx#interface:ButtonProps",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/button.tsx",
+      "target": "symbol:frontend/src/components/ui/button.tsx#variable:Button",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "symbol:frontend/src/components/ui/card.tsx#variable:Card",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "symbol:frontend/src/components/ui/card.tsx#variable:CardContent",
+      "line": 43,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "symbol:frontend/src/components/ui/card.tsx#variable:CardDescription",
+      "line": 36,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "symbol:frontend/src/components/ui/card.tsx#variable:CardFooter",
+      "line": 50,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "symbol:frontend/src/components/ui/card.tsx#variable:CardHeader",
+      "line": 18,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "symbol:frontend/src/components/ui/card.tsx#variable:CardTitle",
+      "line": 25,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "symbol:frontend/src/components/ui/dialog.tsx#function:Dialog",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogDescription",
+      "line": 47,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogFooter",
+      "line": 51,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogHeader",
+      "line": 39,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "symbol:frontend/src/components/ui/dialog.tsx#function:DialogTitle",
+      "line": 43,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/switch.tsx",
+      "target": "symbol:frontend/src/components/ui/switch.tsx#function:Switch",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "symbol:frontend/src/components/ui/table.tsx#variable:Table",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "symbol:frontend/src/components/ui/table.tsx#variable:TableBody",
+      "line": 20,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "symbol:frontend/src/components/ui/table.tsx#variable:TableCell",
+      "line": 49,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "symbol:frontend/src/components/ui/table.tsx#variable:TableHead",
+      "line": 38,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "symbol:frontend/src/components/ui/table.tsx#variable:TableHeader",
+      "line": 13,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "symbol:frontend/src/components/ui/table.tsx#variable:TableRow",
+      "line": 27,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "symbol:frontend/src/components/ui/tabs.tsx#function:Tabs",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsContent",
+      "line": 90,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsList",
+      "line": 35,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "symbol:frontend/src/components/ui/tabs.tsx#function:TabsTrigger",
+      "line": 48,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "symbol:frontend/src/components/ui/tabs.tsx#interface:TabsContextValue",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "symbol:frontend/src/components/ui/tabs.tsx#variable:TabsContext",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "defines",
+      "source": "file:frontend/src/lib/utils.ts",
+      "target": "symbol:frontend/src/lib/utils.ts#function:cn",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.8,
+      "extractor": "conservative-js-symbols"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/DataPreviewTable.tsx",
+      "specifier": "./components/DataPreviewTable",
+      "line": 6,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/ExecutionFeed.tsx",
+      "specifier": "./components/ExecutionFeed",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/Header.tsx",
+      "specifier": "./components/Header",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "specifier": "./components/ScenarioSidebar",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/Scorecard.tsx",
+      "specifier": "./components/Scorecard",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "specifier": "./components/TinkerSettingsModal",
+      "line": 7,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/ui/badge.tsx",
+      "specifier": "./components/ui/badge",
+      "line": 10,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/ui/button.tsx",
+      "specifier": "./components/ui/button",
+      "line": 11,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/ui/card.tsx",
+      "specifier": "./components/ui/card",
+      "line": 8,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "file:frontend/src/components/ui/tabs.tsx",
+      "specifier": "./components/ui/tabs",
+      "line": 9,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 12,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/App.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/DataPreviewTable.tsx",
+      "target": "file:frontend/src/components/ui/table.tsx",
+      "specifier": "./ui/table",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/DataPreviewTable.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 3,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/DataPreviewTable.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ExecutionFeed.tsx",
+      "target": "file:frontend/src/components/ui/badge.tsx",
+      "specifier": "./ui/badge",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ExecutionFeed.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 3,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ExecutionFeed.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Header.tsx",
+      "target": "file:frontend/src/components/ui/badge.tsx",
+      "specifier": "./ui/badge",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Header.tsx",
+      "target": "file:frontend/src/components/ui/button.tsx",
+      "specifier": "./ui/button",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Header.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Header.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "file:frontend/src/components/ui/badge.tsx",
+      "specifier": "./ui/badge",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "file:frontend/src/components/ui/button.tsx",
+      "specifier": "./ui/button",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "file:frontend/src/components/ui/card.tsx",
+      "specifier": "./ui/card",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "file:frontend/src/components/ui/switch.tsx",
+      "specifier": "./ui/switch",
+      "line": 5,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 6,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ScenarioSidebar.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Scorecard.tsx",
+      "target": "file:frontend/src/components/ui/badge.tsx",
+      "specifier": "./ui/badge",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Scorecard.tsx",
+      "target": "file:frontend/src/components/ui/card.tsx",
+      "specifier": "./ui/card",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Scorecard.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/Scorecard.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "target": "file:frontend/src/components/ui/badge.tsx",
+      "specifier": "./ui/badge",
+      "line": 4,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "target": "file:frontend/src/components/ui/button.tsx",
+      "specifier": "./ui/button",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "target": "file:frontend/src/components/ui/dialog.tsx",
+      "specifier": "./ui/dialog",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 5,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/TinkerSettingsModal.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/badge.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "specifier": "../../lib/utils",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/badge.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/button.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "specifier": "../../lib/utils",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/button.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "specifier": "../../lib/utils",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/card.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "specifier": "../../lib/utils",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "package:npm:lucide-react",
+      "specifier": "lucide-react",
+      "line": 3,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/dialog.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/switch.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "specifier": "../../lib/utils",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/switch.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "specifier": "../../lib/utils",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/table.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "file:frontend/src/lib/utils.ts",
+      "specifier": "../../lib/utils",
+      "line": 2,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/components/ui/tabs.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/lib/utils.ts",
+      "target": "package:npm:clsx",
+      "specifier": "clsx",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/lib/utils.ts",
+      "target": "package:npm:tailwind-merge",
+      "specifier": "tailwind-merge",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/main.tsx",
+      "target": "file:frontend/src/App.tsx",
+      "specifier": "./App",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/main.tsx",
+      "target": "package:npm:react-dom",
+      "specifier": "react-dom/client",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/main.tsx",
+      "target": "package:npm:react",
+      "specifier": "react",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/src/main.tsx",
+      "target": "unresolved:frontend/src/main.tsx:./index.css",
+      "specifier": "./index.css",
+      "line": 4,
+      "resolved": false,
+      "confidence": 0.4,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/vite.config.ts",
+      "target": "package:npm:@vitejs/plugin-react",
+      "specifier": "@vitejs/plugin-react",
+      "line": 2,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/vite.config.ts",
+      "target": "package:npm:vite",
+      "specifier": "vite",
+      "line": 1,
+      "resolved": false,
+      "confidence": 0.5,
+      "extractor": "javascript-imports"
+    },
+    {
+      "type": "imports",
+      "source": "file:frontend/vite.config.ts",
+      "target": "runtime:javascript:path",
+      "specifier": "path",
+      "line": 3,
+      "resolved": true,
+      "confidence": 0.85,
+      "extractor": "javascript-imports"
+    }
+  ],
+  "warnings": [
+    "Python AST unavailable: Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+  ],
+  "stats": {
+    "unresolvedCalls": 38
+  }
+}

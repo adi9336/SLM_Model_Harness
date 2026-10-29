@@ -1,0 +1,30 @@
+{
+  "task": "CORE-HARNESS",
+  "gate": "unit-tests",
+  "kind": "command",
+  "attempt": "fae37d90-6d51-4595-be43-22ce5eccaf3e",
+  "command": "py -m pytest tests/",
+  "started_at": "2026-10-29T09:07:04.019Z",
+  "observed_at": "2026-10-29T09:07:07.403Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "============================= test session starts =============================\r\nplatform win32 -- Python 3.13.9, pytest-8.4.2, pluggy-1.5.0\r\nrootdir: C:\\Users\\Adi\\Desktop\\Adi\\My_Projects\\SLM_Model_Harness\r\nplugins: anyio-4.10.0\r\ncollected 19 items\r\n\r\ntests\\test_agent.py .                                                    [  5%]\r\ntests\\test_datastore.py ..........                                       [ 57%]\r\ntests\\test_reliability.py .....                                          [ 84%]\r\ntests\\test_tasks.py ...                                                  [100%]\r\n\r\n============================= 19 passed in 1.45s ==============================\r\n",
+  "stderr": "",
+  "failure": null,
+  "receipt": null,
+  "revision": {
+    "commit": null,
+    "dirty": null
+  },
+  "source_hash": "a4247374bcf38e038c25c3ed39242eada6a5bba8fe1e57fad23e4daa00bd56da",
+  "before_hash": "a4247374bcf38e038c25c3ed39242eada6a5bba8fe1e57fad23e4daa00bd56da",
+  "config_hash": "1625d63366d912748d2a2518fdec463dd788fb7c402498ca8eb1d1fffe6a4334",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "arch": "x64",
+    "verifier": "cbdddbf25e5ed5f3406b93881ae54f64d11a8c54f0bfe177d19d9d9946a6a971",
+    "variables": {}
+  },
+  "hash": "3b24fd59486beed119ab187ff2d5551d5e6a78acb84f5d73a95fea5fc266e5a0"
+}

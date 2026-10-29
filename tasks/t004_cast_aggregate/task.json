@@ -1,0 +1,5 @@
+{
+  "name": "t004_cast_aggregate",
+  "prompt": "Load tasks/t004_cast_aggregate/orders.csv into a table named 'orders'. Cast the 'amount' column to number. Aggregate the total amount per CustomerID (sum of amount) into a table named 'agg'. Save the 'agg' table to tasks/t004_cast_aggregate/out.csv",
+  "out_path": "tasks/t004_cast_aggregate/out.csv"
+}
