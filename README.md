@@ -84,9 +84,18 @@ SLM_Model_Harness/
 pip install -r backend/requirements.txt
 ```
 
-### Step 2: (Optional) Configure Tinker API or Ollama
-- Copy `.env.example` to `.env` if you wish to customize models.
-- If you have `TINKER_API_KEY` set in your environment, Qwen 8B reasoning is automatically offloaded to the cloud!
+### Step 2: Set Up Local Ollama & xLAM 1B (Automated)
+Run the one-click setup script to install Ollama, launch the background daemon, and pull the local `allenporter/xlam:1b` model:
+```powershell
+.\setup_ollama.bat
+# or in PowerShell:
+.\setup_ollama.ps1
+```
+The agent automatically detects and uses local Ollama on port `11434` for Level-2 tool formatting, running fast on CPU without requiring an external GPU.
+
+### Step 3: Configure Cloud Reasoner (Optional)
+- Set `TINKER_API_KEY` in `.env` to run the Level-1 Reasoner with cloud Qwen 3.5-4B inference.
+- If Ollama is running locally, Level-2 tool formatting is automatically executed by local `xlam:1b` on your machine.
 - If no keys or models are configured, the built-in **Rehearsal Demo mode** executes automatically so live stage presentations never fail.
 
 ---

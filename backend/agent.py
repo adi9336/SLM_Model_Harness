@@ -147,6 +147,8 @@ class Agent:
 
         self.reasoner_client = None
         self.formatter_client = None
+        self.reasoner_source = "Rehearsal Demo"
+        self.formatter_source = "Rehearsal Demo"
         self.backend_name = "Rehearsal Demo"
 
         if not self.demo_mode and OpenAI is not None:
@@ -157,7 +159,8 @@ class Agent:
                         base_url=config.TINKER_BASE_URL,
                         api_key=config.TINKER_API_KEY,
                     )
-                    self.backend_name = f"Tinker API ({config.TINKER_MODEL})"
+                    self.reasoner_source = f"Tinker Cloud ({config.TINKER_MODEL})"
+                    self.backend_name = self.reasoner_source
                 except Exception as e:
                     if self.verbose:
                         print(f"  [Warning] Failed to initialize Tinker client: {e}")
@@ -170,30 +173,66 @@ class Agent:
                         api_key=config.OPENAI_API_KEY or "not-needed",
                         default_headers={"x-opencode-session": config.OPENCODE_SESSION},
                     )
-                    self.backend_name = "OpenAI Endpoint"
+                    self.reasoner_source = "OpenAI Endpoint"
+                    self.backend_name = self.reasoner_source
                 except Exception:
                     self.reasoner_client = None
             else:
                 try:
                     self.reasoner_client = OpenAI(base_url=config.OLLAMA_BASE_URL, api_key="ollama")
-                    self.backend_name = f"Local Ollama ({config.PRIORITY_MODEL})"
+                    self.reasoner_source = f"Local Ollama ({config.PRIORITY_MODEL})"
+                    self.backend_name = self.reasoner_source
                 except Exception:
                     self.reasoner_client = None
 
-            # 2. Setup Level-2 Formatter Client (Local Ollama xLAM or Tinker Model with Single-Tool Gating)
+            # 2. Setup Level-2 Formatter Client (Local Ollama xLAM with fallback)
             try:
-                # Test if local Ollama is reachable for xLAM
+                import os
+                import shutil
+                import subprocess
                 import urllib.request
-                req = urllib.request.Request("http://127.0.0.1:11434/api/tags")
-                with urllib.request.urlopen(req, timeout=0.8) as resp:
-                    if resp.status == 200:
-                        self.formatter_client = OpenAI(base_url=config.OLLAMA_BASE_URL, api_key="ollama")
-            except Exception:
-                # Local Ollama is offline: if Tinker is available, use Tinker model for Level 2 single-tool gating
-                if config.TINKER_API_KEY and self.reasoner_client:
+
+                # Check if Ollama daemon is listening on port 11434; if not, auto-launch it
+                ollama_online = False
+                try:
+                    req = urllib.request.Request("http://127.0.0.1:11434/api/tags")
+                    with urllib.request.urlopen(req, timeout=0.8) as resp:
+                        if resp.status == 200:
+                            ollama_online = True
+                except Exception:
+                    ollama_bin = shutil.which("ollama") or os.path.expandvars(r"%LOCALAPPDATA%\Programs\Ollama\ollama.exe")
+                    if os.path.exists(ollama_bin):
+                        try:
+                            subprocess.Popen(
+                                [ollama_bin, "serve"],
+                                stdout=subprocess.DEVNULL,
+                                stderr=subprocess.DEVNULL,
+                                creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+                            )
+                            time.sleep(2.0)
+                            req = urllib.request.Request("http://127.0.0.1:11434/api/tags")
+                            with urllib.request.urlopen(req, timeout=1.0) as resp:
+                                if resp.status == 200:
+                                    ollama_online = True
+                        except Exception:
+                            ollama_online = False
+
+                if ollama_online:
+                    self.formatter_client = OpenAI(base_url=config.OLLAMA_BASE_URL, api_key="ollama")
+                    self.formatter_source = f"Local Ollama ({config.FORMATTER_MODEL})"
+                elif config.TINKER_API_KEY and self.reasoner_client:
                     self.formatter_client = self.reasoner_client
+                    self.formatter_source = f"Tinker API Single-Tool Gating ({config.TINKER_MODEL})"
                 else:
                     self.formatter_client = None
+                    self.formatter_source = "Rehearsal Simulation"
+            except Exception:
+                if config.TINKER_API_KEY and self.reasoner_client:
+                    self.formatter_client = self.reasoner_client
+                    self.formatter_source = f"Tinker API Single-Tool Gating ({config.TINKER_MODEL})"
+                else:
+                    self.formatter_client = None
+                    self.formatter_source = "Rehearsal Simulation"
 
     def _notify(self, phase: str, title: str, payload: Any = None):
         if self.reporter:
@@ -267,12 +306,21 @@ class Agent:
 
             content = (msg.content or "").strip()
             parsed = self._parse_xlam_json(content)
+            if isinstance(parsed, dict):
+                if "tool_calls" in parsed and isinstance(parsed["tool_calls"], list):
+                    parsed = parsed["tool_calls"]
+                elif "name" in parsed:
+                    parsed = [parsed]
+
             if isinstance(parsed, list) and parsed and isinstance(parsed[0], dict):
                 first = parsed[0]
                 name = first.get("name")
                 args = first.get("arguments") or first.get("parameters") or {}
                 if isinstance(args, str):
-                    args = json.loads(args)
+                    try:
+                        args = json.loads(args)
+                    except Exception:
+                        pass
                 if name:
                     return {"name": name, "arguments": args}
 
@@ -290,10 +338,17 @@ class Agent:
             return json.loads(content)
         except json.JSONDecodeError:
             pass
-        m = re.search(r"\[.*\]", content, re.DOTALL)
-        if m:
+        # Try extracting JSON object {...} or array [...]
+        m_obj = re.search(r"\{.*\}", content, re.DOTALL)
+        if m_obj:
             try:
-                return json.loads(m.group(0))
+                return json.loads(m_obj.group(0))
+            except json.JSONDecodeError:
+                pass
+        m_arr = re.search(r"\[.*\]", content, re.DOTALL)
+        if m_arr:
+            try:
+                return json.loads(m_arr.group(0))
             except json.JSONDecodeError:
                 pass
         return None

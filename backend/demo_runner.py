@@ -32,6 +32,7 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.text import Text
 
+import config
 from agent import Agent
 from automation.datastore import DataStore
 from automation.etl_tools import ETL_TOOLS, make_callables
@@ -74,13 +75,13 @@ TASKS_CATALOG = [
 ]
 
 
-def print_banner(live: bool = False):
+def print_banner(live: bool = False, reasoner_source: str = "", formatter_source: str = ""):
     banner_text = Text()
     banner_text.append("TWO-LEVEL AGENT ARCHITECTURE -- LIVE DEMO\n", style="bold cyan")
     banner_text.append("Autonomous ETL Pipeline & DevOps Test Execution\n\n", style="bold white")
 
-    model_label = "Qwen 3.5 4B (Tinker Cloud)" if (live and config.TINKER_API_KEY) else "Qwen 3 8B (Intent Decomposition)"
-    formatter_label = "xLAM 1B / Single-Tool Gating (Verbatim Value Fidelity)"
+    model_label = reasoner_source or ("Qwen 3.5-4B (Tinker Cloud)" if (live and config.TINKER_API_KEY) else "Qwen 3 8B (Intent Decomposition)")
+    formatter_label = formatter_source or "xLAM 1B (Local Ollama @ 127.0.0.1:11434)"
 
     banner_text.append("* Reasoner (Level 1): ", style="bold yellow")
     banner_text.append(f"{model_label}\n", style="white")
@@ -92,7 +93,10 @@ def print_banner(live: bool = False):
     console.print(Panel(banner_text, border_style="cyan", padding=(1, 2)))
 
 
-def make_reporter():
+def make_reporter(live: bool = False):
+    l1_title = "[bold cyan][2/4] LEVEL 1: QWEN 3.5-4B (TINKER CLOUD) DECOMPOSITION[/bold cyan]" if (live and config.TINKER_API_KEY) else "[bold cyan][2/4] LEVEL 1: QWEN 3 8B DECOMPOSITION[/bold cyan]"
+    l2_title = "[bold green][3/4] LEVEL 2: xLAM 1B (LOCAL OLLAMA) ATOMIC TOOL FORMAT[/bold green]"
+
     def report(phase: str, title: str, payload=None):
         payload_str = str(payload) if payload is not None else ""
         if phase == "ANALYZE":
@@ -101,11 +105,11 @@ def make_reporter():
                                 border_style="yellow"))
         elif phase == "PLAN":
             console.print(Panel(f"[bold cyan]{title}[/bold cyan]\n[white]{payload_str}[/white]",
-                                title="[bold cyan][2/4] LEVEL 1: QWEN 3 8B DECOMPOSITION[/bold cyan]",
+                                title=l1_title,
                                 border_style="cyan"))
         elif phase == "FORMAT":
             console.print(Panel(f"[bold green]{title}[/bold green]\n[code]{payload_str}[/code]",
-                                title="[bold green][3/4] LEVEL 2: xLAM 1B ATOMIC TOOL FORMAT[/bold green]",
+                                title=l2_title,
                                 border_style="green"))
         elif phase == "EXEC":
             console.print(f"  [dim cyan]>> Datastore Execute:[/dim cyan] [bold white]{title}[/bold white] [dim]({payload_str})[/dim]")
@@ -148,7 +152,7 @@ def run_task(task_dir: str, verify_only: bool = False, live_models: bool = False
     out_target = spec.get("out_path") or spec.get("out_dir")
     req_files = len(spec["expected_files"]) if spec.get("expected_files") else None
 
-    reporter = None if verify_only else make_reporter()
+    reporter = None if verify_only else make_reporter(live=live_models)
 
     agent = Agent(
         verbose=not verify_only,

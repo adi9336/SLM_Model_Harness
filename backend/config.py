@@ -28,7 +28,7 @@ PRIORITY_MODEL = os.getenv("PRIORITY_MODEL", "qwen3:8b")
 PRIORITY_TEMPERATURE = float(os.getenv("PRIORITY_TEMPERATURE", "0.1"))
 
 # Formatter (xLAM: formats single atomic tool calls with exact arguments)
-FORMATTER_MODEL = os.getenv("FORMATTER_MODEL", "xlam2:1b-fc-q4")
+FORMATTER_MODEL = os.getenv("FORMATTER_MODEL", "allenporter/xlam:1b")
 FORMATTER_TEMPERATURE = float(os.getenv("FORMATTER_TEMPERATURE", "0.0"))
 FORMATTER_MODE = os.getenv("FORMATTER_MODE", "xlam")
 FORMATTER_FALLBACK = bool(int(os.getenv("FORMATTER_FALLBACK", "1")))
