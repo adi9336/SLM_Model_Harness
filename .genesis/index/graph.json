@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "SLM_Model_Harness",
-  "revision": "e5f80490e4915e8d770d287f5f0a000419c84859",
-  "sourceHash": "f6f903c558fe59e85e39285e867824c1352521f6d7bf7fa72fe45b4a62275800",
+  "revision": "009bb077eaab050b167b9b6895111f45f36d8819",
+  "sourceHash": "1a580ffa7c12e6bec5047bbb1ff1f57c63bee103093bd90e73c4da1f5f8e790a",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -17,7 +17,7 @@
       "language": "python",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "ad232f5c46311e259ebe79728ef3b7ff6df36aa41e90c81b26f7a0c1636c1ebf"
+      "contentHash": "09842053de6a7d265cfd1d04359b5da4d85be896b1d72361c7b39260362ef409"
     },
     {
       "id": "file:backend/automation/__init__.py",
@@ -2212,7 +2212,7 @@
     }
   ],
   "warnings": [
-    "Python AST unavailable: Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases."
+    "Python AST unavailable: python3 failed"
   ],
   "stats": {
     "unresolvedCalls": 38
