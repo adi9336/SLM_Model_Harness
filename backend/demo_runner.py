@@ -14,6 +14,11 @@ import sys
 import time
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
+os.chdir(BASE_DIR)
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 # Ensure UTF-8 output on Windows terminals to avoid cp1252 charmap encoding issues
 if sys.platform == "win32":
     try:

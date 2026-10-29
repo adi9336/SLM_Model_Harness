@@ -42,8 +42,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-STATIC_DIR = Path(__file__).parent / "static"
-TASKS_DIR = Path(__file__).parent / "tasks"
+BASE_DIR = Path(__file__).resolve().parent
+os.chdir(BASE_DIR)
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+STATIC_DIR = BASE_DIR / "static"
+TASKS_DIR = BASE_DIR / "tasks"
 
 TASK_META = [
     {

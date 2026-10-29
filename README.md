@@ -50,35 +50,53 @@ Single small language models (SLMs, e.g., 1B–8B parameters) running locally on
 
 ---
 
-## 2. Quickstart & Installation
+## 2. Repository Structure
 
-### Step 1: Install Python Dependencies
-```bash
-pip install -r requirements.txt
 ```
-*(Requirements: `fastapi`, `uvicorn`, `openai`, `jsonschema`, `rich`, `pytest`, `python-dotenv`)*
-
-### Step 2: (Optional) Set Up Local Ollama Models
-To run with live local neural models via Ollama:
-1. Download Ollama from [ollama.com](https://ollama.com/download).
-2. Pull Qwen 3 8B (or Qwen 2.5):
-   ```bash
-   ollama run qwen2.5:7b
-   ```
-3. Create the local xLAM formatter model using the modelfile:
-   ```bash
-   ollama create xlam2:1b-fc-q4 -f xlam_modelfile.txt
-   ```
-*(Note: If Ollama is not running during rehearsal or if you present without local model weights, the runner automatically engages the verified demo mode so the stage presentation never stalls).*
+SLM_Model_Harness/
+├── backend/                  # FastAPI Backend & Agent Engine
+│   ├── automation/           # Atomic ETL & DevOps tools + SQLite datastore
+│   ├── static/               # Built production React bundle (served by FastAPI)
+│   ├── tasks/                # 11 Benchmark evaluation scenarios (t001–t011)
+│   ├── tests/                # Automated pytest unit tests (19 passed)
+│   ├── agent.py              # Two-Level Agent Orchestrator (Qwen 8B + xLAM 1B)
+│   ├── config.py             # Tinker Cloud API & Local Ollama configuration
+│   ├── demo_runner.py        # Rich Terminal CLI presentation runner
+│   ├── server.py             # FastAPI Web Server with Server-Sent Events (SSE)
+│   └── requirements.txt      # Python dependencies
+├── frontend/                 # Modular React + TypeScript application
+│   ├── src/components/ui/    # shadcn/ui components: Button, Card, Badge, Tabs, etc.
+│   ├── src/components/       # Domain views: Header, Sidebar, Stream, Scorecard
+│   ├── package.json          # React, Vite, Tailwind CSS, Lucide icons
+│   └── vite.config.ts        # Vite configuration (proxies to FastAPI :8000)
+├── .env.example              # Environment variables template
+├── pytest.ini                # Pytest configuration
+├── README.md                 # Full technical and presentation guide
+└── STITCH_SETUP.md           # Google Stitch MCP integration guide
+```
 
 ---
 
-## 3. Running the Live Demo
+## 3. Quickstart & Installation
 
-### Option A: Modern Web Dashboard (FastAPI + Tailwind UI)
-Launch the web server with:
+### Step 1: Install Python Dependencies
 ```bash
-py server.py
+pip install -r backend/requirements.txt
+```
+
+### Step 2: (Optional) Configure Tinker API or Ollama
+- Copy `.env.example` to `.env` if you wish to customize models.
+- If you have `TINKER_API_KEY` set in your environment, Qwen 8B reasoning is automatically offloaded to the cloud!
+- If no keys or models are configured, the built-in **Rehearsal Demo mode** executes automatically so live stage presentations never fail.
+
+---
+
+## 4. Running the Live Demo
+
+### Option A: Modern Web Dashboard (FastAPI + React shadcn/ui)
+Launch the server from the project root:
+```bash
+py backend/server.py
 ```
 Open **[http://localhost:8000](http://localhost:8000)** in your browser to view:
 - Interactive scenario selector (Clean Dates, Relational Join, Currency Cast, Deduplication, File Reorganization).
@@ -87,23 +105,31 @@ Open **[http://localhost:8000](http://localhost:8000)** in your browser to view:
 - Instant 100% ground-truth scorecard and output data table preview.
 
 ### Option B: Terminal Presentation CLI (Rich Console)
-Run the audience presentation CLI with:
+Run the audience presentation CLI:
 ```bash
-py demo_runner.py
+py backend/demo_runner.py
 ```
 *(Interactive menu with direct options 1–5 or `[A]` to run all scenarios).*
 
 Direct CLI flags:
 ```bash
 # Run specific scenario
-py demo_runner.py --task tasks/t001_clean_dates
+py backend/demo_runner.py --task tasks/t001_clean_dates
 
 # Run full benchmark evaluation suite
-py demo_runner.py --all
+py backend/demo_runner.py --all
 
-# Run with live local Ollama models
-py demo_runner.py --live
+# Run with live cloud / local models
+py backend/demo_runner.py --live
 ```
+
+### Option C: Frontend Development (HMR)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+*(Runs on `http://localhost:5173` proxying to FastAPI on port 8000).*
 
 ---
 
