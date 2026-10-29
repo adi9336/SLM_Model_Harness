@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "project": "SLM_Model_Harness",
-  "revision": "f6650e8233c582edeae561413a9754b429cc862b",
-  "sourceHash": "ca838d7f87b7cf511229476fc89ae4f99a727e16c5766f8e63e0347b5a36278f",
+  "revision": "e5f80490e4915e8d770d287f5f0a000419c84859",
+  "sourceHash": "f6f903c558fe59e85e39285e867824c1352521f6d7bf7fa72fe45b4a62275800",
   "provenance": {
     "tool": "genesis-graphizer",
     "method": "static-analysis",
@@ -167,7 +167,7 @@
       "language": "python",
       "confidence": 1,
       "extractor": "filesystem",
-      "contentHash": "318b95d7208e413c4a60c07d255f8052b335bc9880fcda81936c94998b55ff0f"
+      "contentHash": "51be8c3eb2c51d3071cd2c48ed575e64bb1ba4aacc6b799e40dd83f053d500a7"
     },
     {
       "id": "file:backend/tests/test_agent.py",
