@@ -2,13 +2,16 @@
 # Git Ignore - Two-Level Agent Harness
 # =====================================================================
 
-# Environment variables & secrets
+# Environment variables & secrets (never leak credentials)
 .env
 .env.local
 .env.*.local
+**/.env
+**/.env.local
 
 # Node.js dependencies & builds
 node_modules/
+**/node_modules/
 frontend/node_modules/
 frontend/dist/
 dist/
@@ -18,38 +21,48 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Python caches and bytecode
+# Python caches, bytecode & virtual environments
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.so
 .pytest_cache/
+**/.pytest_cache/
 .coverage
 htmlcov/
 *.egg-info/
 .eggs/
+venv/
+.venv/
+env/
 
-# Database artifacts and runtime logs
+# Database artifacts, journals & runtime traces
 *.db
+**/*.db
 *.db-journal
+**/*.db-journal
 *.audit.jsonl
+**/*.audit.jsonl
 *.log
+**/*.log
 
-# Task output artifacts
-tasks/**/out.csv
-tasks/t010_file_organize/processed/*
-!tasks/t010_file_organize/processed/.gitkeep
+# Task runtime outputs (cleared before/after agent runs)
+**/out.csv
+backend/tasks/**/out.csv
+backend/tasks/t010_file_organize/processed/*
+!backend/tasks/t010_file_organize/processed/.gitkeep
 
 # Operating system files
 .DS_Store
-Thumbs.db
-desktop.ini
+**/Thumbs.db
+**/desktop.ini
 
-# Backup files
+# Backup & scratch files
 *.backup
 *.rea.backup
 
-# Local IDEs
+# Local IDE & editor files
 .vscode/
 .idea/
 *.swp
